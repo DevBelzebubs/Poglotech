@@ -25,7 +25,7 @@
             <label for="stock" class="form-label">Stock</label>
             <input type="number" name="stock" class="form-control" required>
         </div>
-
+        <input type="file" name="imagen" accept="image/*">
         <button type="submit" class="btn btn-success">Guardar Producto</button>
         <a href="{{ route('admin.productos.index') }}" class="btn btn-secondary">Cancelar</a>
     </form>

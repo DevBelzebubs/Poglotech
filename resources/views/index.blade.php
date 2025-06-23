@@ -143,7 +143,7 @@
                     </div>
                     <div class="col-lg-4 col-12">
                         <div class="projects-thumb projects-thumb-small">
-                            <a href="{{ route('productos')}}">
+                            <a href="{{ route('catalogo')}}">
                                 <img src="{{ asset('img/bateria.png') }}" class="img-fluid projects-image" alt="">
                                 <div class="projects-info">
                                     <div class="projects-title-wrap">
@@ -160,7 +160,7 @@
                     </div>
                     <div class="col-lg-4 col-12">
                         <div class="projects-thumb projects-thumb-small">
-                            <a href="{{ route('productos')}}">
+                            <a href="{{ route('catalogo')}}">
                                 <img src="{{ asset('img/ram.png') }}" class="img-fluid projects-image" alt="">
                                 <div class="projects-info">
                                     <div class="projects-title-wrap">
@@ -177,7 +177,7 @@
                     </div>
                     <div class="col-lg-4 col-12">
                         <div class="projects-thumb projects-thumb-small">
-                            <a href="{{ route('productos')}}">
+                            <a href="{{ route('catalogo')}}">
                                 <img src="{{ asset('img/ventilador.png') }}" class="img-fluid projects-image" alt="">
                                 <div class="projects-info">
                                     <div class="projects-title-wrap">
@@ -194,7 +194,7 @@
                     </div>
                     <div class="col-lg-8 col-12">
                         <div class="projects-thumb projects-thumb-large">
-                            <a href="{{ route('productos')}}">
+                            <a href="{{ route('catalogo')}}">
                                 <img src="{{ asset('img/cargador.png') }}" class="img-fluid projects-image" alt="">
                                 <div class="projects-info">
                                     <div class="projects-title-wrap">
@@ -212,7 +212,7 @@
                     </div>
                     <div class="col-lg-4 col-12">
                         <div class="projects-thumb projects-thumb-small">
-                            <a href="{{ route('productos')}}">
+                            <a href="{{route('catalogo')}}">
                                 <img src="{{ asset('img/procesador.png') }}" class="img-fluid projects-image" alt="">
                                 <div class="projects-info">
                                     <div class="projects-title-wrap">
@@ -277,7 +277,6 @@
                                             info@company.com
                                         </a>
                                     </h5>
-                                    <!-- Copy "embed a map" HTML code from any point on Google Maps -> Share Link  -->
                                     <iframe class="google-map mt-4"
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4063.103580426464!2d-83.0264337484065!3d42.33402597908653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2cce05ddf4f1%3A0xcc0559eb3fda00c9!2sDetroit%20Riverwalk%2C%20Detroit%2C%20MI!5e1!3m2!1sen!2sus!4v1657814406289!5m2!1sen!2sus"
                                         width="100%" height="300" allowfullscreen="" loading="lazy"></iframe>

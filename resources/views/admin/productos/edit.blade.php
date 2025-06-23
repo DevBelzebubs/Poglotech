@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mb-5 pb-5">
     <h2>Editar Producto</h2>
-    <form action="{{ route('admin.productos.update', $producto->id) }}" method="POST" class="mt-4">
+    <form action="{{ route('admin.productos.update', $producto->id) }}" enctype="multipart/form-data" method="POST" class="mt-4">
         @csrf
         @method('PUT')
 
@@ -26,8 +26,12 @@
             <label for="stock" class="form-label">Stock</label>
             <input type="number" name="stock" class="form-control" value="{{ $producto->stock }}" required>
         </div>
-
+        <input type="file" name="imagen" accept="image/*">
+        @if ($producto->imagen)
+        <img src="{{ asset('storage/' . $producto->imagen) }}" width="100">
+        @endif
         <button type="submit" class="btn btn-primary">Actualizar</button>
+
         <a href="{{ route('admin.productos.index') }}" class="btn btn-secondary">Cancelar</a>
     </form>
 </div>

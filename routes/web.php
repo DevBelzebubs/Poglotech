@@ -4,6 +4,9 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AdminMiddleware;
+use App\Http\Controllers\User\ProductoController;
+
+
 Route::get('/', function () {
     return view('index');
 })->name('index');
@@ -31,5 +34,7 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->name('admi
     Route::resource('productos', ProductController::class);
     Route::resource('admin/productos', ProductController::class)->names('admin.productos');
 });
+Route::get('/catalogo', [ProductoController::class, 'catalogo'])->name('catalogo');
+Route::get('/producto/{id}', [ProductoController::class, 'detalle'])->name('producto');
 
 require __DIR__.'/auth.php';

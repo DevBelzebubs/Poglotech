@@ -38,7 +38,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#section_4">Productos</a>
+                    <a class="nav-link text-white" href="{{route('catalogo')}}">Productos</a>
                 </li>
 
                 <li class="nav-item">
