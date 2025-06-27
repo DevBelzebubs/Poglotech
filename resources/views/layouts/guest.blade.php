@@ -9,6 +9,7 @@
     <link href="{{ asset('css/tooplate-waso-strategy.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-icons.css')}}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap--popup.css')}}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @stack('styles')
 </head>
 <body>

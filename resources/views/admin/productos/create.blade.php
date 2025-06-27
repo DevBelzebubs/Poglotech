@@ -2,6 +2,9 @@
 
 @section('content')
 <div class="container mb-5 pb-5">
+    <a href="{{ route('admin.dashboard') }}" class="btn btn-danger mb-3">
+    Regresar
+    </a>
     <h2>Crear Producto</h2>
     <form action="{{ route('admin.productos.store') }}" method="POST" class="mt-4">
         @csrf
@@ -27,7 +30,6 @@
         </div>
         <input type="file" name="imagen" accept="image/*">
         <button type="submit" class="btn btn-success">Guardar Producto</button>
-        <a href="{{ route('admin.productos.index') }}" class="btn btn-secondary">Cancelar</a>
     </form>
 </div>
 @endsection

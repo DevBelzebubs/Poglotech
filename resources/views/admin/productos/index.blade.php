@@ -3,17 +3,17 @@
 @section('content')
 <div class="container">
     <h1 class="mb-4 text-center">Lista de Productos</h1>
-
+    <a href="{{ route('admin.dashboard') }}" class="btn btn-danger">
+        Regresar
+    </a>
     @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}
         </div>
     @endif
-
     <div class="mb-3 text-end">
         <a href="{{ route('admin.productos.create') }}" class="btn btn-primary">Crear nuevo producto</a>
     </div>
-
     @if($productos->isEmpty())
         <div class="alert alert-info">No hay productos registrados.</div>
     @else

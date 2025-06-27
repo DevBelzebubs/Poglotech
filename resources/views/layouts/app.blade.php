@@ -10,10 +10,10 @@
     <link href="{{ asset('css/tooplate-waso-strategy.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-icons.css')}}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap--popup.css')}}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @stack('styles')
 </head>
 <body class="bg-light">
-    {{-- Navbar --}}
     <nav class="navbar navbar-expand-lg bg-primary shadow-lg">
     <div class="container">
         <a href="#" class="navbar-brand text-white">Portable <span class="text">Technology</span></a>
@@ -28,13 +28,12 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{ route('index') }}">Inicio</a>
                 </li>
-
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#section_2">Nosotros</a>
+                    <a class="nav-link text-white" href="{{ route('index') }}#section_2">Nosotros</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#section_3">Servicios</a>
+                    <a class="nav-link text-white" href="{{ route('index') }}#section_3">Servicios</a>
                 </li>
 
                 <li class="nav-item">
@@ -42,7 +41,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#section_5">Contactos</a>
+                    <a class="nav-link text-white" href="{{ route('index') }}#section_5">Contactos</a>
                 </li>
 
                 @auth
@@ -84,6 +83,7 @@
     </div>
 </nav>
     <main class="mt-5 pt-4">
+        @include('components.carrito-sidebar')
         @yield('content')
     </main>
     <footer class="site-footer bg-primary text-white">

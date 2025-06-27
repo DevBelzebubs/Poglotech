@@ -30,6 +30,14 @@
                             <a href="{{ route('catalogo') }}" class="btn btn-outline-secondary w-100">← Volver al catálogo</a>
                         </div>
                     </div>
+                    @if(Auth::check())
+                    <form method="POST" action="{{ route('carrito.agregar', $producto->id) }}">
+                        @csrf
+                        <button type="submit" class="btn btn-success w-100">Agregar al carrito</button>
+                    </form>
+                    @else
+                    <a href="{{ route('login') }}" class="btn btn-outline-primary w-100">Inicia sesión para comprar</a>
+                    @endif
                 </div>
             </div>
 

@@ -5,13 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <h2 class="text-center mb-4">Inicio de Sesión</h2>
-
             @if (session('status'))
                 <div class="alert alert-success">
                     {{ session('status') }}
                 </div>
             @endif
-
             <form method="POST" action="{{ route('login') }}" class="border p-4 rounded shadow-sm bg-light">
                 @csrf
 
@@ -36,12 +34,6 @@
                 <div class="form-check mb-3">
                     <input type="checkbox" name="remember" id="remember_me" class="form-check-input">
                     <label class="form-check-label" for="remember_me">Recuérdame</label>
-                </div>
-
-                <div class="mb-3 text-end">
-                    @if (Route::has('password.request'))
-                        <a href="{{ route('password.request') }}" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
-                    @endif
                 </div>
 
                 <div class="d-grid mb-3">

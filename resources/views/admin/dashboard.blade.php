@@ -6,7 +6,6 @@
     <p class="text-center mb-5">Bienvenido, {{ Auth::user()->name }}.</p>
 
     <div class="row justify-content-center">
-        <!-- Tarjeta de resumen de productos -->
         <div class="col-md-4 mb-4">
             <div class="card border-primary shadow-sm h-100">
                 <div class="card-body text-center">
@@ -20,7 +19,6 @@
             </div>
         </div>
 
-        <!-- Tarjeta para crear producto -->
         <div class="col-md-4 mb-4">
             <div class="card border-success shadow-sm h-100">
                 <div class="card-body text-center">
@@ -34,14 +32,13 @@
             </div>
         </div>
 
-        <!-- Estadísticas futuras -->
         <div class="col-md-4 mb-4">
             <div class="card border-info shadow-sm h-100">
                 <div class="card-body text-center">
                     <i class="bi bi-people display-4 text-info mb-3"></i>
                     <h5 class="card-title">Usuarios Registrados</h5>
                     <p class="card-text fs-4">{{ \App\Models\User::count() }}</p>
-                    <a href="#" class="btn btn-outline-info mt-2">
+                    <a href="{{route('admin.usuarios.index')}}" class="btn btn-outline-info mt-2">
                         Ver Usuarios
                     </a>
                 </div>
@@ -53,8 +50,8 @@
                 <div class="card-body text-center">
                     <i class="bi bi-bar-chart-line display-4 text-warning mb-3"></i>
                     <h5 class="card-title">Ventas Totales</h5>
-                    <p class="card-text fs-4">S/. 0.00</p> <!-- Puedes reemplazar con lógica real más adelante -->
-                    <a href="#" class="btn btn-outline-warning mt-2">
+                    <p class="card-text fs-4">S/. {{ number_format($ventasTotales, 2) }}</p>
+                    <a href="{{ route('admin.ventas.index') }}" class="btn btn-outline-warning mt-2">
                         Ver Detalles
                     </a>
                 </div>

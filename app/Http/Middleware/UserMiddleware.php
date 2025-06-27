@@ -15,6 +15,10 @@ class UserMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        return $next($request);
+       if(auth()->check() && auth()->user()->role === 'user') {
+            return $next($request);
+        }
+
+        return redirect()->route('home')->with('error', 'You do not have access to this resource.');
     }
 }
