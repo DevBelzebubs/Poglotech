@@ -9,7 +9,7 @@ use App\Http\Middleware\UserMiddleware;
 use App\Http\Controllers\User\CarritoController;
 use App\Http\Controllers\User\CompraController;
 use App\Http\Controllers\User\VentaController;
-
+use App\Http\Controllers\ContactoController;
 Route::get('/', function () {
     return view('index');
 })->name('index');
@@ -48,5 +48,5 @@ Route::middleware(['auth',UserMiddleware::class])->group(function(){
     Route::get('/carrito', [App\Http\Controllers\User\CarritoController::class, 'ver'])->name('carrito.ver');
     Route::post('/comprar', [App\Http\Controllers\User\CompraController::class, 'realizarCompra'])->name('comprar');
 });
-
+Route::post('/contactar', [ContactoController::class, 'enviar'])->name('contacto.enviar');
 require __DIR__.'/auth.php';

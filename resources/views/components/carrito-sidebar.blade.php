@@ -72,7 +72,6 @@
                 });
             });
         }
-
         @if(session('success'))
             Swal.fire({
                 title: '¡Compra exitosa!',

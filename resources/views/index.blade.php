@@ -13,7 +13,7 @@
                 Venta y repuestos de laptops al por mayor y al por menor, todo a un click de distancia
             </h3>
             <div class="text-center mt-5">
-                <a href="{{ url('/productos') }}" class="btn btn-primary">Ir al catálogo</a>
+                <a href="{{route('catalogo')}}" class="btn btn-primary">Ir al catálogo</a>
             </div>
         </div>
     </header>
@@ -241,22 +241,19 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-12">
-                            <form class="custom-form contact-form" action="" method="post" role="form">
+                            <form class="custom-form contact-form" action="{{ route('contacto.enviar') }}" method="POST" role="form">
+                                @csrf
                                 <h2 class="mb-5">Contáctanos</h2>
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12">
-                                        <input type="text" name="name" id="name" class="form-control"
-                                            placeholder="Nombre" required="">
+                                        <input type="text" name="name" id="name" class="form-control" placeholder="Nombre" required>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
-                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*"
-                                            class="form-control" placeholder="Email" required="">
+                                        <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
                                     </div>
                                     <div class="col-12">
-                                        <textarea class="form-control" rows="7" id="message" name="message"
-                                            placeholder="Mensaje"></textarea>
-
-                                        <button type="submit" class="form-control">Enviar</button>
+                                        <textarea class="form-control" rows="7" id="message" name="message" placeholder="Mensaje" required></textarea>
+                                        <button type="submit" class="form-control mt-3">Enviar</button>
                                     </div>
                                 </div>
                             </form>
@@ -278,8 +275,8 @@
                                         </a>
                                     </h5>
                                     <iframe class="google-map mt-4"
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4063.103580426464!2d-83.0264337484065!3d42.33402597908653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2cce05ddf4f1%3A0xcc0559eb3fda00c9!2sDetroit%20Riverwalk%2C%20Detroit%2C%20MI!5e1!3m2!1sen!2sus!4v1657814406289!5m2!1sen!2sus"
-                                        width="100%" height="300" allowfullscreen="" loading="lazy"></iframe>
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d975.004839840436!2d-77.00316555972046!3d-12.17908508911684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9ca1955f84f%3A0x25862b51e1017cdb!2sUniversidad%20Privada%20del%20Norte%20(UPN)!5e0!3m2!1ses-419!2spe!4v1751337429979!5m2!1ses-419!2spe" 
+                                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                                 </div>
                             </div>
